@@ -19,7 +19,11 @@ function writePassword() {
     return writePassword();
   }
   else {
-    window.alert("Youre awesome.");
+    var lowercaseLetters = window.confirm("Would you like to include lowercase letters?");
+    var uppercaseLetters = window.confirm("Would you like to include uppercase letters?");
+    var numbers = window.confirm("Would you like to include numbers?");
+    var special = window.confirm("Would you like to include special characters?");
+
   }
   
   
