@@ -18,6 +18,7 @@ function writePassword() {
     window.alert("You cannot have more than 128 characters. Please try again.");
     return writePassword();
   }
+  //asking the user for the password criteria and what they would like to use
   else {
     var lowercaseLetters = window.confirm("Would you like to include lowercase letters?");
     var uppercaseLetters = window.confirm("Would you like to include uppercase letters?");
@@ -25,6 +26,15 @@ function writePassword() {
     var special = window.confirm("Would you like to include special characters?");
 
   }
+  //subtracting 1 from the characters variable to better suit the for loop since the array starts at 0
+  charactersLength = characters - 1;
+  
+  
+  for (var i = 0; i < charactersLength; i++) {
+    console.log("Hello");
+  }
+
+
   
   
   var password = generatePassword();
