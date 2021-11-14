@@ -30,117 +30,129 @@ function writePassword() {
   charactersLength = characters - 1;
   
   
-  for (var i = 0; i < charactersLength; i++) {
-    console.log("Hello");
-  }
+
+  for (var i = 0; i < characters; i++) {
 // saying if numbers is true meaning the user clicked 'okay' to add numbers, we will generate a random number between 0 and 9.
-  if (numbers) {
-    var numbersPassword = (Math.floor(Math.random() * 10));
-    console.log(numbersPassword);
-  }
-  if (lowercaseLetters) {
+    if (numbers) {
+      var numbersPassword = (Math.floor(Math.random() * 10));
+      console.log(numbersPassword);
+    }
+    if (lowercaseLetters) {
 
-    var letters = [
-      "a",
-      "b",
-      "c",
-      "d",
-      "e",
-      "f",
-      "g",
-      "h",
-      "i",
-      "j",
-      "k",
-      "l",
-      "m",
-      "n",
-      "o",
-      "p",
-      "q",
-      "r",
-      "s",
-      "t",
-      "u",
-      "v",
-      "w",
-      "x",
-      "y",
-      "z",
-    ];
-    var randomLetter = letters[Math.floor(Math.random() * letters.length)];
-    console.log(randomLetter);
-  }
+      var letters = [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+      ];
+      var randomLetter = letters[Math.floor(Math.random() * letters.length)];
+      console.log(randomLetter);
+    }
 
-  if (uppercaseLetters) {
-    var upperLetters = [
-      "A",
-      "B",
-      "C",
-      "D",
-      "E",
-      "F",
-      "G",
-      "H",
-      "I",
-      "J",
-      "K",
-      "L",
-      "M",
-      "N",
-      "O",
-      "P",
-      "Q",
-      "R",
-      "S",
-      "T",
-      "U",
-      "V",
-      "W",
-      "X",
-      "Y",
-      "Z",
-    ];
-    var randomUpperLetter = upperLetters[Math.floor(Math.random() * upperLetters.length)];
-    console.log(randomUpperLetter);
-  }
+    if (uppercaseLetters) {
+      var upperLetters = [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+      ];
+      var randomUpperLetter = upperLetters[Math.floor(Math.random() * upperLetters.length)];
+      console.log(randomUpperLetter);
+    }
 
-  if (special) {
-    var specialCharacters = [
-      "!",
-      "#",
-      "$",
-      "%",
-      "&",
-      "'",
-      "(",
-      ")",
-      "*",
-      "+",
-      ",",
-      "-",
-      ".",
-      "/",
-      ":",
-      ";",
-      "<",
-      ">",
-      "=",
-      "?",
-      "@",
-      "[",
-      "]",
-      "^",
-      "_",
-      "{",
-      "}",
-      "|",
-      "~",
-      "`",
-    ];
-    var randomSpecial = specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
-    console.log(randomSpecial);
-  }
+    if (special) {
+      var specialCharacters = [
+        "!",
+        "#",
+        "$",
+        "%",
+        "&",
+        "'",
+        "(",
+        ")",
+        "*",
+        "+",
+        ",",
+        "-",
+        ".",
+        "/",
+        ":",
+        ";",
+        "<",
+        ">",
+        "=",
+        "?",
+        "@",
+        "[",
+        "]",
+        "^",
+        "_",
+        "{",
+        "}",
+        "|",
+        "~",
+        "`",
+      ];
+      var randomSpecial = specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
+      console.log(randomSpecial);
+    }
+
+}
+
+  //for (var i = 0; i < charactersLength; i++) {
+    //var passwordArray = (charactersLength);
+    //passwordArray[i] = randomSpecial;
+    //console.log(passwordArray);
+
+    
+  
+ // }
+
+
 
 
   
