@@ -40,3 +40,6 @@ Using the character length and password criteria the user selected, we use a ser
 
 ## Conclusion
 Using Javascript, the password generator website provides an easy way for users to get a safe and secure password with a click of a button. The website offers different criteria depending on what the user wants their password to contain. If the user does not like the first random password generated, just simply click the red "Generate Password" button and start over to obtain a new password.
+
+Please use this link to go straight to Password Generator!
+https://tylerwiatrek.github.io/Password-Generator/
