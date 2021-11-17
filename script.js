@@ -1,9 +1,7 @@
-// Assignment code here
-
-
-// Get references to the #generate element
+// adding a query selector to select the #generate id tag in html which is the button.
 var generateBtn = document.querySelector("#generate");
 
+//beginning the main write password function here
 function writePassword(event) {
   //Getting the characters response from the user
   var characters = window.prompt("How many characters would you like the password to have?");
