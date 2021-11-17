@@ -5,7 +5,9 @@
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword() {
+
+
+function writePassword(event) {
   //Getting the characters response from the user
   var characters = window.prompt("How many characters would you like the password to have?");
   //Making sure the user entered at least 8 characters
@@ -27,19 +29,15 @@ function writePassword() {
 
   }
   //subtracting 1 from the characters variable to better suit the for loop since the array starts at 0
-  charactersLength = characters - 1;
+  //charactersLength = characters - 1;
   
   
 
-  for (var i = 0; i < characters; i++) {
+  //for (var i = 0; i < characters; i++) {
+      //const passwordArray = [];
 // saying if numbers is true meaning the user clicked 'okay' to add numbers, we will generate a random number between 0 and 9.
-    if (numbers) {
-      var numbersPassword = (Math.floor(Math.random() * 10));
-      console.log(numbersPassword);
-    }
-    if (lowercaseLetters) {
-
-      var letters = [
+    if (lowercaseLetters && uppercaseLetters && numbers && special) {
+      var passwordContent = [
         "a",
         "b",
         "c",
@@ -66,13 +64,6 @@ function writePassword() {
         "x",
         "y",
         "z",
-      ];
-      var randomLetter = letters[Math.floor(Math.random() * letters.length)];
-      console.log(randomLetter);
-    }
-
-    if (uppercaseLetters) {
-      var upperLetters = [
         "A",
         "B",
         "C",
@@ -99,13 +90,6 @@ function writePassword() {
         "X",
         "Y",
         "Z",
-      ];
-      var randomUpperLetter = upperLetters[Math.floor(Math.random() * upperLetters.length)];
-      console.log(randomUpperLetter);
-    }
-
-    if (special) {
-      var specialCharacters = [
         "!",
         "#",
         "$",
@@ -136,29 +120,143 @@ function writePassword() {
         "|",
         "~",
         "`",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "0",
       ];
-      var randomSpecial = specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
-      console.log(randomSpecial);
+      var finalPasswordArray = "";
+      finalPasswordArray.length = characters;
+      
+      for (var i = 0; i < characters; i++) {
+        finalPasswordArray += passwordContent[Math.floor(Math.random() * passwordContent.length)];
+
+
+      }
+      window.alert(finalPasswordArray);
+
     }
 
-}
+    else if (lowercaseLetters && uppercaseLetters && numbers && !special) {
+      var passwordContent = [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        //"!",
+        //"#",
+        //"$",
+        //"%",
+        //"&",
+       // "'",
+       // "(",
+       // ")",
+        //"*",
+        //"+",
+        //",",
+        //"-",
+        //".",
+        //"/",
+        //":",
+        //";",
+        //"<",
+        //">",
+        //"=",
+        //"?",
+        //"@",
+        //"[",
+        //"]",
+        //"^",
+        //"_",
+        //"{",
+        //"}",
+        //"|",
+        //"~",
+        //"`",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "0",
+      ];
+      var finalPasswordArray = "";
+      finalPasswordArray.length = characters;
+      
+      for (var i = 0; i < characters; i++) {
+        finalPasswordArray += passwordContent[Math.floor(Math.random() * passwordContent.length)];
 
-  //for (var i = 0; i < charactersLength; i++) {
-    //var passwordArray = (charactersLength);
-    //passwordArray[i] = randomSpecial;
-    //console.log(passwordArray);
 
+      }
+      window.alert(finalPasswordArray);
+
+    }
+   
     
-  
- // }
 
 
 
 
-  
 
-  
-  
+  generateBtn.addEventListener("click", writePassword);  
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
