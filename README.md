@@ -34,9 +34,9 @@ These prompts should display to the user like this:
 Once the user has selected either yes or no for each criteria, we move on to generating the password.
 
 ## Generating the Password
-Using the character length and password criteria the user inputting, we use a series of if/else if statements and for loops to find the right criteria and generating an array for the password. Once this is finished, the user will be displayed with their final password. The following image is what the customer will see once the password generation is complete:
+Using the character length and password criteria the user selected, we use a series of if/else if statements and for loops to find the right criteria and generate an array for the password. Once this is finished, the user will be displayed with their final password. The following image is what the user will see once the password generation is complete:
 
 ![Screenshot of Password-Generator Website](./readme-complete.JPG "Password-Generator completed password")
 
 ## Conclusion
-Using Javascript, the password generator website provides an easy way for users to get a safe and secure password with a click of a button. The website offers different criteria depending on what ther user wants their password to contain. If the user does not like the first random password generated, just simply click the red "Generate Password" button and start over to obtain a new password.
+Using Javascript, the password generator website provides an easy way for users to get a safe and secure password with a click of a button. The website offers different criteria depending on what the user wants their password to contain. If the user does not like the first random password generated, just simply click the red "Generate Password" button and start over to obtain a new password.
