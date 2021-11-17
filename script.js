@@ -4,9 +4,6 @@
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-
-
 function writePassword(event) {
   //Getting the characters response from the user
   var characters = window.prompt("How many characters would you like the password to have?");
@@ -21,6 +18,7 @@ function writePassword(event) {
     return writePassword();
   }
   //asking the user for the password criteria and what they would like to use
+  //adding a window.confirm here to reference later in the code using boolean values
   else {
     var lowercaseLetters = window.confirm("Would you like to include lowercase letters?");
     var uppercaseLetters = window.confirm("Would you like to include uppercase letters?");
@@ -28,15 +26,8 @@ function writePassword(event) {
     var special = window.confirm("Would you like to include special characters?");
 
   }
-  //subtracting 1 from the characters variable to better suit the for loop since the array starts at 0
-  //charactersLength = characters - 1;
-  
-  
-
-  //for (var i = 0; i < characters; i++) {
-      //const passwordArray = [];
-// saying if numbers is true meaning the user clicked 'okay' to add numbers, we will generate a random number between 0 and 9.
-    if (lowercaseLetters && uppercaseLetters && numbers && special) {
+ 
+     if (lowercaseLetters && uppercaseLetters && numbers && special) {
       var passwordContent = [
         "a",
         "b",
@@ -197,36 +188,6 @@ function writePassword(event) {
         "X",
         "Y",
         "Z",
-        //"!",
-        //"#",
-        //"$",
-        //"%",
-        //"&",
-       // "'",
-       // "(",
-       // ")",
-        //"*",
-        //"+",
-        //",",
-        //"-",
-        //".",
-        //"/",
-        //":",
-        //";",
-        //"<",
-        //">",
-        //"=",
-        //"?",
-        //"@",
-        //"[",
-        //"]",
-        //"^",
-        //"_",
-        //"{",
-        //"}",
-        //"|",
-        //"~",
-        //"`",
         "1",
         "2",
         "3",
@@ -249,6 +210,790 @@ function writePassword(event) {
       window.alert(finalPasswordArray);
 
     }
+     else if (lowercaseLetters && uppercaseLetters && !numbers && special) {
+      var passwordContent = [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        "!",
+        "#",
+        "$",
+        "%",
+        "&",
+        "'",
+        "(",
+        ")",
+        "*",
+        "+",
+        ",",
+        "-",
+        ".",
+        "/",
+        ":",
+        ";",
+        "<",
+        ">",
+        "=",
+        "?",
+        "@",
+        "[",
+        "]",
+        "^",
+        "_",
+        "{",
+        "}",
+        "|",
+        "~",
+        "`",
+      ];
+      var finalPasswordArray = "";
+      finalPasswordArray.length = characters;
+      
+      for (var i = 0; i < characters; i++) {
+        finalPasswordArray += passwordContent[Math.floor(Math.random() * passwordContent.length)];
+
+
+      }
+      window.alert(finalPasswordArray);
+
+    }
+    else if (lowercaseLetters && !uppercaseLetters && numbers && special) {
+      var passwordContent = [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+        "!",
+        "#",
+        "$",
+        "%",
+        "&",
+        "'",
+        "(",
+        ")",
+        "*",
+        "+",
+        ",",
+        "-",
+        ".",
+        "/",
+        ":",
+        ";",
+        "<",
+        ">",
+        "=",
+        "?",
+        "@",
+        "[",
+        "]",
+        "^",
+        "_",
+        "{",
+        "}",
+        "|",
+        "~",
+        "`",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "0",
+      ];
+      var finalPasswordArray = "";
+      finalPasswordArray.length = characters;
+      
+      for (var i = 0; i < characters; i++) {
+        finalPasswordArray += passwordContent[Math.floor(Math.random() * passwordContent.length)];
+
+
+      }
+      window.alert(finalPasswordArray);
+
+    }
+    else if (!lowercaseLetters && uppercaseLetters && numbers && special) {
+      var passwordContent = [
+
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        "!",
+        "#",
+        "$",
+        "%",
+        "&",
+        "'",
+        "(",
+        ")",
+        "*",
+        "+",
+        ",",
+        "-",
+        ".",
+        "/",
+        ":",
+        ";",
+        "<",
+        ">",
+        "=",
+        "?",
+        "@",
+        "[",
+        "]",
+        "^",
+        "_",
+        "{",
+        "}",
+        "|",
+        "~",
+        "`",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "0",
+      ];
+      var finalPasswordArray = "";
+      finalPasswordArray.length = characters;
+      
+      for (var i = 0; i < characters; i++) {
+        finalPasswordArray += passwordContent[Math.floor(Math.random() * passwordContent.length)];
+
+
+      }
+      window.alert(finalPasswordArray);
+
+    }
+    else if (lowercaseLetters && uppercaseLetters && !numbers && !special) {
+      var passwordContent = [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+      
+      ];
+      var finalPasswordArray = "";
+      finalPasswordArray.length = characters;
+      
+      for (var i = 0; i < characters; i++) {
+        finalPasswordArray += passwordContent[Math.floor(Math.random() * passwordContent.length)];
+
+
+      }
+      window.alert(finalPasswordArray);
+
+    }
+    else if (lowercaseLetters && !uppercaseLetters && numbers && !special) {
+      var passwordContent = [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "0",
+      ];
+      var finalPasswordArray = "";
+      finalPasswordArray.length = characters;
+      
+      for (var i = 0; i < characters; i++) {
+        finalPasswordArray += passwordContent[Math.floor(Math.random() * passwordContent.length)];
+
+
+      }
+      window.alert(finalPasswordArray);
+
+    }
+    else if (!lowercaseLetters && uppercaseLetters && numbers && !special) {
+      var passwordContent = [
+    
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "0",
+      ];
+      var finalPasswordArray = "";
+      finalPasswordArray.length = characters;
+      
+      for (var i = 0; i < characters; i++) {
+        finalPasswordArray += passwordContent[Math.floor(Math.random() * passwordContent.length)];
+
+
+      }
+      window.alert(finalPasswordArray);
+
+    }
+    else if (lowercaseLetters && !uppercaseLetters && !numbers && special) {
+      var passwordContent = [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+        "!",
+        "#",
+        "$",
+        "%",
+        "&",
+        "'",
+        "(",
+        ")",
+        "*",
+        "+",
+        ",",
+        "-",
+        ".",
+        "/",
+        ":",
+        ";",
+        "<",
+        ">",
+        "=",
+        "?",
+        "@",
+        "[",
+        "]",
+        "^",
+        "_",
+        "{",
+        "}",
+        "|",
+        "~",
+        "`",
+   
+      ];
+      var finalPasswordArray = "";
+      finalPasswordArray.length = characters;
+      
+      for (var i = 0; i < characters; i++) {
+        finalPasswordArray += passwordContent[Math.floor(Math.random() * passwordContent.length)];
+
+
+      }
+      window.alert(finalPasswordArray);
+
+    }
+    else if (!lowercaseLetters && uppercaseLetters && !numbers && special) {
+      var passwordContent = [
+    
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        "!",
+        "#",
+        "$",
+        "%",
+        "&",
+        "'",
+        "(",
+        ")",
+        "*",
+        "+",
+        ",",
+        "-",
+        ".",
+        "/",
+        ":",
+        ";",
+        "<",
+        ">",
+        "=",
+        "?",
+        "@",
+        "[",
+        "]",
+        "^",
+        "_",
+        "{",
+        "}",
+        "|",
+        "~",
+        "`",
+    
+      ];
+      var finalPasswordArray = "";
+      finalPasswordArray.length = characters;
+      
+      for (var i = 0; i < characters; i++) {
+        finalPasswordArray += passwordContent[Math.floor(Math.random() * passwordContent.length)];
+
+
+      }
+      window.alert(finalPasswordArray);
+
+    }
+    else if (!lowercaseLetters && !uppercaseLetters && numbers && special) {
+      var passwordContent = [
+     
+        "!",
+        "#",
+        "$",
+        "%",
+        "&",
+        "'",
+        "(",
+        ")",
+        "*",
+        "+",
+        ",",
+        "-",
+        ".",
+        "/",
+        ":",
+        ";",
+        "<",
+        ">",
+        "=",
+        "?",
+        "@",
+        "[",
+        "]",
+        "^",
+        "_",
+        "{",
+        "}",
+        "|",
+        "~",
+        "`",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "0",
+      ];
+      var finalPasswordArray = "";
+      finalPasswordArray.length = characters;
+      
+      for (var i = 0; i < characters; i++) {
+        finalPasswordArray += passwordContent[Math.floor(Math.random() * passwordContent.length)];
+
+
+      }
+      window.alert(finalPasswordArray);
+
+    }
+    else if (!lowercaseLetters && !uppercaseLetters && !numbers && special) {
+      var passwordContent = [
+    
+        "!",
+        "#",
+        "$",
+        "%",
+        "&",
+        "'",
+        "(",
+        ")",
+        "*",
+        "+",
+        ",",
+        "-",
+        ".",
+        "/",
+        ":",
+        ";",
+        "<",
+        ">",
+        "=",
+        "?",
+        "@",
+        "[",
+        "]",
+        "^",
+        "_",
+        "{",
+        "}",
+        "|",
+        "~",
+        "`",
+     
+      ];
+      var finalPasswordArray = "";
+      finalPasswordArray.length = characters;
+      
+      for (var i = 0; i < characters; i++) {
+        finalPasswordArray += passwordContent[Math.floor(Math.random() * passwordContent.length)];
+
+
+      }
+      window.alert(finalPasswordArray);
+
+    }
+    else if (!lowercaseLetters && !uppercaseLetters && numbers && !special) {
+      var passwordContent = [
+    
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "0",
+      ];
+      var finalPasswordArray = "";
+      finalPasswordArray.length = characters;
+      
+      for (var i = 0; i < characters; i++) {
+        finalPasswordArray += passwordContent[Math.floor(Math.random() * passwordContent.length)];
+
+
+      }
+      window.alert(finalPasswordArray);
+
+    }
+    else if (!lowercaseLetters && uppercaseLetters && !numbers && !special) {
+      var passwordContent = [
+ 
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+    
+      ];
+      var finalPasswordArray = "";
+      finalPasswordArray.length = characters;
+      
+      for (var i = 0; i < characters; i++) {
+        finalPasswordArray += passwordContent[Math.floor(Math.random() * passwordContent.length)];
+
+
+      }
+      window.alert(finalPasswordArray);
+
+    }
+    else if (lowercaseLetters && !uppercaseLetters && !numbers && !special) {
+      var passwordContent = [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+
+      ];
+      var finalPasswordArray = "";
+      finalPasswordArray.length = characters;
+      
+      for (var i = 0; i < characters; i++) {
+        finalPasswordArray += passwordContent[Math.floor(Math.random() * passwordContent.length)];
+
+
+      }
+      window.alert(finalPasswordArray);
+      
+
+    }
+    if (!lowercaseLetters && !uppercaseLetters && !numbers && !special) {
+      window.alert("You need to select at least one criteria. Please try again!");
+      writePassword();
+     
+    }
+
    
     
 
@@ -257,10 +1002,10 @@ function writePassword(event) {
 
 
   generateBtn.addEventListener("click", writePassword);  
-  var password = generatePassword();
+  //var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  passwordText.textContent = finalPasswordArray;
 
 }
 
